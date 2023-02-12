@@ -18,7 +18,42 @@ public class Main {
  * @param args
  */
 	public static void main(String[] args) {
-
+		
+		Scanner scanner = new Scanner(System.in);
+	    Stock inventario = new Stock();
+	    
+	    while (true) {
+	      System.out.print("Agregar producto (escriba 'agregar'), seleccionar producto (escriba 'seleccionar'), o salir (escriba 'salir'): ");
+	      String entrada = scanner.next();
+	      if (entrada.equalsIgnoreCase("salir")) {
+	        break;
+	      } else if (entrada.equalsIgnoreCase("agregar")) {
+	        System.out.print("Ingrese el nombre del producto: ");
+	        String nombreProducto = scanner.next();
+	        System.out.print("Ingrese la cantidad de " + nombreProducto + " en stock: ");
+	        int cantidad = scanner.nextInt();
+	        inventario.agregarProducto(nombreProducto, cantidad);
+	      }
+		
+	    }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		// VARIABLES
 		int opcion = 0;
 
@@ -260,6 +295,8 @@ public class Main {
 			return null;
 
 		}
+		
+		
 
 	}
 }
