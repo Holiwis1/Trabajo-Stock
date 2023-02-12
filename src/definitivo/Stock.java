@@ -17,7 +17,11 @@ public class Stock {
 	  private String[] nombresProductos = new String[MAX_PRODUCTOS];
 	  private int[] cantidades = new int[MAX_PRODUCTOS];
 	  private int contadorProductos = 0;
-	  
+	  /**
+	   * Metodo para agregar el nombre y la cantidad del producto
+	   * @param nombreProducto
+	   * @param cantidad
+	   */
 	  public void agregarProducto(String nombreProducto, int cantidad) {
 	    if (contadorProductos < MAX_PRODUCTOS) {
 	      nombresProductos[contadorProductos] = nombreProducto;
@@ -27,7 +31,10 @@ public class Stock {
 	      System.out.println("Lo siento, no se pueden agregar más productos al inventario.");
 	    }
 	  }
-	  
+	  /**
+	   * metodo para selecionar el producto ya creado en agregarProducto
+	   * @param nombreProducto
+	   */
 	  public void seleccionarProducto(String nombreProducto) {
 	    int indiceProducto = -1;
 	    for (int i = 0; i < contadorProductos; i++) {

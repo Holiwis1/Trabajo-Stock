@@ -23,17 +23,28 @@ public class Main {
 	    Stock inventario = new Stock();
 	    
 	    while (true) {
-	    	
+	    	/**
+	    	 * menu de seleccion
+	    	 */
 	      System.out.print("Agregar producto (escriba 'agregar'), seleccionar producto (escriba 'seleccionar'), o salir (escriba 'salir'): ");
 	      String entrada = scanner.next();
+	      /**
+	       * seleccion de salir
+	       */
 	      if (entrada.equalsIgnoreCase("salir")) {
 	        break;
+	        /**
+	         * seleccion de agregar
+	         */
 	      } else if (entrada.equalsIgnoreCase("agregar")) {
 	        System.out.print("Ingrese el nombre del producto: ");
 	        String nombreProducto = scanner.next();
 	        System.out.print("Ingrese la cantidad de " + nombreProducto + " en stock: ");
 	        int cantidad = scanner.nextInt();
 	        inventario.agregarProducto(nombreProducto, cantidad);
+	     /**
+	      * seleccion de selecionar el producto
+	      */
 	      }else if (entrada.equalsIgnoreCase("seleccionar")) {
 	          System.out.print("Ingrese el nombre del producto a seleccionar: ");
 	          String productoNombre = scanner.next();
