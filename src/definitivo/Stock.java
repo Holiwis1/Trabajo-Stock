@@ -1,9 +1,5 @@
 package definitivo;
 
-
-
-
-
 /**
  * 
  * @author joaquin
@@ -11,50 +7,57 @@ package definitivo;
  */
 public class Stock {
 	/**
-	 * Variables para el stock + 2 arrays(el array String=cadena de texto,Int cantidad de un producto en stock.)
+	 * Variables para el stock + 2 arrays(el array String=cadena de texto,Int
+	 * cantidad de un producto en stock.)
 	 */
 	private static final int MAX_PRODUCTOS = 10;
-	  private String[] nombresProductos = new String[MAX_PRODUCTOS];
-	  private int[] cantidades = new int[MAX_PRODUCTOS];
-	  private int contadorProductos = 0;
-	  /**
-	   * Metodo para agregar el nombre y la cantidad del producto
-	   * @param nombreProducto
-	   * @param cantidad
-	   */
-	  public void agregarProducto(String nombreProducto, int cantidad) {
-	    if (contadorProductos < MAX_PRODUCTOS) {
-	      nombresProductos[contadorProductos] = nombreProducto;
-	      cantidades[contadorProductos] = cantidad;
-	      contadorProductos++;
-	    } else {
-	      System.out.println("Lo siento, no se pueden agregar más productos al inventario.");
-	    }
-	  }
-	  /**
-	   * metodo para selecionar el producto ya creado en agregarProducto
-	   * @param nombreProducto
-	   */
-	  public void seleccionarProducto(String nombreProducto) {
-	    int indiceProducto = -1;
-	    for (int i = 0; i < contadorProductos; i++) {
-	      if (nombresProductos[i].equalsIgnoreCase(nombreProducto)) {
-	        indiceProducto = i;
-	        break;
-	      }
-	    }
-	    if (indiceProducto != -1) {
-	      if (cantidades[indiceProducto] > 0) {
-	        cantidades[indiceProducto]--;
-	        System.out.println("Producto seleccionado: " + nombresProductos[indiceProducto]);
-	        System.out.println("Cantidad restante: " + cantidades[indiceProducto]);
-	      } else {
-	        System.out.println("Lo siento, el producto " + nombresProductos[indiceProducto] + " está agotado.");
-	      }
-	    } else {
-	      System.out.println("Lo siento, no se encontró el producto " + nombreProducto + " en el inventario.");
-	    }
-	  }
+	private String[] nombresProductos = new String[MAX_PRODUCTOS];
+	private int[] cantidades = new int[MAX_PRODUCTOS];
+	private int contadorProductos = 0;
+
+	/**
+	 * Metodo para agregar el nombre y la cantidad del producto
+	 * 
+	 * @param nombreProducto
+	 * @param cantidad
+	 * @param agregarProductos
+	 */
+
+	public void agregarProducto(String nombreProducto, int cantidad) {
+		if (contadorProductos < MAX_PRODUCTOS) {
+			nombresProductos[contadorProductos] = nombreProducto;
+			cantidades[contadorProductos] = cantidad;
+			contadorProductos++;
+		} else {
+			System.out.println("Lo siento, no se pueden agregar más productos al inventario.");
+		}
+	}
+
+	/**
+	 * metodo para selecionar el producto ya creado en agregarProducto
+	 * 
+	 * @param nombreProducto
+	 * @param SeleccionarProductos
+	 */
+	public void seleccionarProducto(String nombreProducto) {
+		int indiceProducto = -1;
+		for (int i = 0; i < contadorProductos; i++) {
+			if (nombresProductos[i].equalsIgnoreCase(nombreProducto)) {
+				indiceProducto = i;
+				break;
+			}
+		}
+		if (indiceProducto != -1) {
+			if (cantidades[indiceProducto] > 0) {
+				cantidades[indiceProducto]--;
+				System.out.println("Producto seleccionado: " + nombresProductos[indiceProducto]);
+				System.out.println("Cantidad restante: " + cantidades[indiceProducto]);
+			} else {
+				System.out.println("Lo siento, el producto " + nombresProductos[indiceProducto] + " está agotado.");
+			}
+		} else {
+			System.out.println("Lo siento, no se encontró el producto " + nombreProducto + " en el inventario.");
+		}
+	}
 
 }
-

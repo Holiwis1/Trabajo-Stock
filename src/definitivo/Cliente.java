@@ -59,6 +59,7 @@ public class Cliente {
 /**
  * setters
  * @param nombre
+ * @param setNombre
  */
 	public void setNombre(String nombre) {
 		System.out.println("Crea tu nombre");
@@ -87,6 +88,7 @@ public class Cliente {
 	}
 	/**
 	 * Metodo para insertar al telefono  las siguientes restricciones
+	 * @param setTelefono
 	 * @param Telefono
 	 * @return
 	 */
@@ -128,7 +130,9 @@ public class Cliente {
 
 	
 	/**
-	 * Metodo para crear los clientes y insertar el telefono	 */
+	 * Metodo para crear los clientes y insertar el telefono	 
+	 *@param rellenarDatos
+	 */
 	public void rellenarDatos() {
 
 		System.out.println(" nombre ");

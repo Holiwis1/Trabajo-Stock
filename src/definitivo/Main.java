@@ -16,6 +16,7 @@ public class Main {
 /**
  * 
  * @param args
+ * @param main
  */
 	public static void main(String[] args) {
 		
@@ -69,12 +70,12 @@ public class Main {
 		
 		
 		
-		// VARIABLES
+		
 		int opcion = 0;
 
 		Scanner sc = new Scanner(System.in);
 
-		// OBJETOS
+	
 		/**
 		 * Creacion objetos
 		 */
@@ -178,7 +179,7 @@ public class Main {
 		System.out.println("(5)");
 		p5.Mostrarmenu();
 /**
- * Elecion de solo dos productos para el cliente
+ * Eleccion de solo dos productos para el cliente
  */
 		while (count < 2) {
 			eleccion = sc.nextInt();
@@ -263,9 +264,9 @@ public class Main {
 		 */
 		pedido.setProducto1(eleccion1);
 		pedido.setProducto2(eleccion2);
-/**
- * Donde se produce el pago de la clase 
- */
+		/**
+		 * Donde se produce el pago de la clase 
+		 */
 		Pasarelappago pago = new Pasarelappago(pedido.pago());
 			//TIKECT
 		/**
